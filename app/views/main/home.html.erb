@@ -3,19 +3,25 @@
 <head> 
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-</head> 
+	<%= stylesheet_link_tag 'home.css' %>
+</head>
 <body>
-	<div data-roll="page">
-		<div data-role="header"> <h1>Header Shit</h1> </div>
-		<div data-role="content"> <p>Here's some content, nigga.</p> </div>
-		<div data-role="footer"  data-type="horizontal">
-			<a href="main/get" data-role="button">Get</a>
-			<a href="main/send" data-role="button">Send</a>
-			<a href="main/help" data-role="button">Help</a>
+	<div id="container">
+		<div id="header">
+			<h1>Pinch</h1>
+		</div>
+		<div id="content"></div>
+		<div id="footer">
+			<div class="nav_button" id="homeDiv">
+				<h3 id="home"> Home </h3>
+			</div>
+			<div class="nav_button" id="getDiv">
+				<h3 id="get"> Get </h3>
+			</div>
+			<div class ="nav_button" id="sendDiv">
+				<h3 id="send"> Send </h3>
+			</div>
 		</div>
 	</div>
 </body>
-
+</html>
