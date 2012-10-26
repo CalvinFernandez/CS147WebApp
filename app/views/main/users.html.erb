@@ -1,1 +1,144 @@
-<h1>Find other peeps who want to pinch you</h1>
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<style>
+	body
+{
+	background: url(/images/retro_intro.png) repeat;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+#container
+{
+	float: left;
+	width:100%;
+	min-height: 100%;
+	margin:0px;
+	position: relative;
+}
+#header
+{
+	position: relative;
+	float:left;
+	width:100%;
+	background-color: black;
+	margin:0px;
+	opacity: 0.5;
+	-webkit-box-shadow: 0 8px 10px -6px black;
+	-moz-box-shadow: 0 8px 10px -6px black;
+	box-shadow: 0 8px 10px -6px black;
+}
+#header > h1
+{
+	text-align: center;
+	color: white;
+	font-size: 80%;
+}
+#contentHolder
+{
+	float: left;
+	width:100%;
+	min-height: 100%;
+	margin:0px;
+	position: absolute;
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+}
+#content 
+{
+	background-color: black;
+	opacity: 0.5;
+	-webkit-box-shadow: 0 8px 10px -6px black;
+	-moz-box-shadow: 0 8px 10px -6px black;
+	box-shadow: 0 8px 10px -6px black;
+	color: white;
+	position: relative;
+	float:left;
+	width:40%;
+	margin: 4em;
+	padding: 1em;
+	text-align: center;
+	font-size: 70%;
+}
+#footer 
+{	
+	position: absolute;
+	bottom:0px;
+	background-color: black;
+	opacity: 0.5;
+	margin: 0px;
+	min-height: 3em;
+}
+.nav_button
+{
+	width: 33.33%;
+	min-height: 3em;
+	margin: 0px;
+}
+.nav_button > h3
+{
+	text-align: center;
+	color: white;
+	font-size: 80%;
+}
+#homeDiv
+{
+	float: left;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: white;
+	margin:0px;
+}
+#sendDiv
+{
+	float: left;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: white;
+	margin:0px;
+}
+#getDiv
+{
+	float: left;
+	margin:0px;
+}
+
+body {width: 100%; min-height: 100%; margin: 0px;}
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>Pinch</h1>
+		</div>
+		<div id="contentHolder">
+			<div id="content">
+				Welcome to Pinch. You are now in the User page. All pinchable users will appear here. 
+			</div>
+		</div>
+		<div id="footer">
+			<a href="/">
+				<div class="nav_button" id="homeDiv">
+					<h3 id="home"> Home </h3>
+				</div>
+			</a>
+			<a href="/receive">
+				<div class="nav_button" id="getDiv">
+					<h3 id="get"> Get </h3>
+				</div>
+			</a>
+			<a href="/pinch">
+				<div class ="nav_button" id="sendDiv">
+					<h3 id="send"> Pinch </h3>
+				</div>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

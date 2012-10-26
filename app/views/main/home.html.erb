@@ -108,6 +108,7 @@
 	float: left;
 	margin:0px;
 }
+
 body {width: 100%; min-height: 100%; margin: 0px;}
 </style>
 </head>
@@ -122,15 +123,21 @@ body {width: 100%; min-height: 100%; margin: 0px;}
 			</div>
 		</div>
 		<div id="footer">
-			<div class="nav_button" id="homeDiv">
-				<h3 id="home"> Home </h3>
-			</div>
-			<div class="nav_button" id="getDiv">
-				<h3 id="get"> Get </h3>
-			</div>
-			<div class ="nav_button" id="sendDiv">
-				<h3 id="send"> Send </h3>
-			</div>
+			<a href="/">
+				<div class="nav_button" id="homeDiv">
+					<h3 id="home"> Home </h3>
+				</div>
+			</a>
+			<a href="/receive">
+				<div class="nav_button" id="getDiv">
+					<h3 id="get"> Get </h3>
+				</div>
+			</a>
+			<a href="/users">
+				<div class ="nav_button" id="sendDiv">
+					<h3 id="send"> Send </h3>
+				</div>
+			</a>
 		</div>
 	</div>
 </body>
