@@ -14,18 +14,17 @@
 }
 #container
 {
-	top: 0;
-	left:0;
+	float: left;
 	width:100%;
 	min-height: 100%;
 	margin:0px;
+	position: relative;
 }
 #header
 {
-	top: 0;
-	left:0;
+	position: relative;
+	float:left;
 	width:100%;
-	height:10%;
 	background-color: black;
 	margin:0px;
 	opacity: 0.5;
@@ -39,29 +38,48 @@
 	color: white;
 	font-size: 80%;
 }
+#contentHolder
+{
+	float: left;
+	width:100%;
+	min-height: 100%;
+	margin:0px;
+	position: absolute;
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+}
 #content 
 {
-	top: 10%;
-	left:0;
-	width:100%;
-	min-height: 80%;
-	margin:0px;
-}
-#footer 
-{
-	bottom: 0%;
-	left: 0;
-	width: 100%;
-	height: 10%;
 	background-color: black;
 	opacity: 0.5;
+	-webkit-box-shadow: 0 8px 10px -6px black;
+	-moz-box-shadow: 0 8px 10px -6px black;
+	box-shadow: 0 8px 10px -6px black;
+	color: white;
+	position: relative;
+	float:left;
+	width:40%;
+	margin: 4em;
+	padding: 1em;
+	text-align: center;
+	font-size: 70%;
+}
+#footer 
+{	
+	position: absolute;
+	bottom:0px;
+	background-color: black;
+	opacity: 0.5;
+	margin: 0px;
+	min-height: 3em;
 }
 .nav_button
 {
 	width: 33.33%;
+	min-height: 3em;
 	margin: 0px;
-	height: 100%;
-	bottom: 0px;
 }
 .nav_button > h3
 {
@@ -71,23 +89,26 @@
 }
 #homeDiv
 {
-	left:0%;
+	float: left;
 	border-right-style: solid;
 	border-right-width: 2px;
 	border-right-color: white;
+	margin:0px;
 }
 #sendDiv
 {
-	left:33.33%;
+	float: left;
 	border-right-style: solid;
 	border-right-width: 2px;
 	border-right-color: white;
+	margin:0px;
 }
 #getDiv
 {
-	left:66.66%;
+	float: left;
+	margin:0px;
 }
-body {top: 0; left: 0; width: 100%; min-height: 100%; margin: 0px;}
+body {width: 100%; min-height: 100%; margin: 0px;}
 </style>
 </head>
 <body>
@@ -95,7 +116,11 @@ body {top: 0; left: 0; width: 100%; min-height: 100%; margin: 0px;}
 		<div id="header">
 			<h1>Pinch</h1>
 		</div>
-		<div id="content"></div>
+		<div id="contentHolder">
+			<div id="content">
+				Welcome to Pinch. Select "Send" to pinch content to a friend or "Get" to receive content.
+			</div>
+		</div>
 		<div id="footer">
 			<div class="nav_button" id="homeDiv">
 				<h3 id="home"> Home </h3>
