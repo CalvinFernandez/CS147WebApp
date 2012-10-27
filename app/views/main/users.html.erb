@@ -52,6 +52,7 @@
 }
 #content 
 {
+	visibility: visible;
 	background-color: black;
 	opacity: 0.5;
 	-webkit-box-shadow: 0 8px 10px -6px black;
@@ -144,8 +145,10 @@ body {width: 100%; min-height: 100%; margin: 0px;}
             	img.onload = function(e) {
                 	window.URL.revokeObjectURL(this.src);
             	}
-            	document.getElementById("content").innerHTML = "";  
-            	document.getElementById("content").appendChild(img); 
+            	var content = document.getElementById("content");
+            	content.innerHTML = "";  
+            	content.appendChild(img); 
+            	content.style.opacity='1.0';
         	}	 
     	} 
 </script> 
