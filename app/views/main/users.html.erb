@@ -116,6 +116,38 @@ a
 body {width: 100%; min-height: 100%; margin: 0px;}
 </style>
 </head>
+<script>
+	window.URL = window.URL || window.webkitURL;
+	$(document).ready(function() {
+
+    	var imageSelect = document.getElementById("imageSelect");
+        	fileSelect = document.getElementById("fileSelect");
+    
+    	fileSelect.addEventListener("click", function (e) 
+    	{
+        	if (imageSelect)
+        	{
+            	imageSelect.click(); 
+        	}
+        	e.preventDefault();
+    	}, false);
+    
+	});
+		function handleFiles(files)
+    	{
+    		console.log(files.length);
+        	if (files.length)
+        	{
+            	var img = document.createElement("img");
+            	img.src = window.URL.createObjectURL(files[0]);
+            	img.onload = function(e) {
+                	window.URL.revokeObjectURL(this.src);
+            	}
+            	document.getElementById("content").innerHTML = "";  
+            	document.getElementById("content").appendChild(img); 
+        	}	 
+    	} 
+</script> 
 <body>
 	<div id="container">
 		<div id="header">
@@ -137,10 +169,10 @@ body {width: 100%; min-height: 100%; margin: 0px;}
 					<h3 id="get"> Get </h3>
 				</div>
 			</a>
-			<a href="/pinch">
+			<input type="file" id="imageSelect" style="display:none" onchange="handleFiles(this.files)">
+			<a href="/pinch" id="fileSelect">
 				<div class ="nav_button" id="sendDiv">
-					<h3 id="send"> Pinch Away!</h3>
-				    <input type="file" name="image">
+					<h3 id="send"> Pinch Away!</h3>				    
                 </div>
 			</a>
 		</div>
