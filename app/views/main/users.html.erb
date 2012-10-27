@@ -141,10 +141,9 @@ body {width: 100%; min-height: 100%; margin: 0px;}
         	{
             	var img = document.createElement("img");
             	img.src = window.URL.createObjectURL(files[0]);
+            	//Post object url to server here//
             	img.height = 120;
-            	img.onload = function(e) {
-                	window.URL.revokeObjectURL(this.src);
-            	}
+
             	var content = document.getElementById("content");
             	content.innerHTML = "";  
             	content.appendChild(img); 
