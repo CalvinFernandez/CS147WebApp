@@ -1,6 +1,7 @@
 // JavaScript Document
 $(function(){
         var zoom = new ZoomView('#zoom','#zoom :first');
+        var zoom = new ZoomView('#zoomGet', '#zoomGet :first');
     });
 
 
