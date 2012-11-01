@@ -7,8 +7,9 @@
   		src: url("IMIT.TTF");
   
 	}
-        #zoom {
-
+        #zoomGet{
+        	height: 100%;
+        	width: 100%;
           }
 		  
 		  .zoomProps{	  

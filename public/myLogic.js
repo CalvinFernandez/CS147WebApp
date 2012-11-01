@@ -1,7 +1,7 @@
 // JavaScript Document
 $(function(){
         var zoom = new ZoomView('#zoom','#zoom :first');
-        var zoom = new ZoomView('#zoomGet', '#zoomGet :first');
+        var zoomlisten = new ZoomListener('#listener', '#listener :first');
     });
 
 
@@ -98,7 +98,6 @@ $(function(){
 		  }
       }
     }
-
 
     function ZoomView(container, element) {
 
@@ -223,4 +222,32 @@ $(function(){
             
         }
 
+    }
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function ZoomListener(container, element) 
+    {
+
+        container = $(container).hammer({
+            prevent_default: true,
+            scale_treshold: 0,
+            drag_min_distance: 0
+        });
+
+        element = $(element);
+
+        container.bind("transformstart", function(event){
+
+            //We save the initial midpoint of the first two touches to say where our transform origin is.
+            alert("transformstart");
+        })
+
+        container.bind("transform", function(event) {
+            alert("transforming");
+          });
+
+        container.bind("transformend", function(event) {
+            alert("transformed");
+        });
     }
