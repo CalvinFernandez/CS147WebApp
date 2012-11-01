@@ -113,7 +113,7 @@ $(function(){
         var displayHeight = container.height();
 
         //These two constants specify the minimum and maximum zoom
-        var MIN_ZOOM = 0;
+        var MIN_ZOOM = 1;
         var MAX_ZOOM = 3;
 
         var scaleFactor = 1;
@@ -165,6 +165,15 @@ $(function(){
         })
 
         container.bind("transform", function(event) {
+            e = event
+
+            if ( Math.abs(e.touches[0].x - e.touches[1].x) < 2 )
+            {
+              if ( Math.abs( e.touches[0].y - e.touches[1].y) < 2 )
+              {
+                alert(" pinch");
+              }
+            }
             scaleFactor = previousScaleFactor * event.scale;
 			
             scaleFactor = Math.max(MIN_ZOOM, Math.min(scaleFactor, MAX_ZOOM));
