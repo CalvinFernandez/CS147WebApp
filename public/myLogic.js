@@ -113,7 +113,7 @@ $(function(){
         var displayHeight = container.height();
 
         //These two constants specify the minimum and maximum zoom
-        var MIN_ZOOM = 1;
+        var MIN_ZOOM = 0;
         var MAX_ZOOM = 3;
 
         var scaleFactor = 1;
