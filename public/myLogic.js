@@ -172,7 +172,8 @@ $(function(){
             {
               if ( Math.abs( e.touches[0].y - e.touches[1].y) < 90 )
               {
-                alert($("#zoom").innerHTML);
+                document.getElementById('zoom').innerHTML = "";
+                alert($("Pinch!");
               }
             }
             scaleFactor = previousScaleFactor * event.scale;
