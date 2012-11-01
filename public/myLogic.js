@@ -176,7 +176,7 @@ $(function(){
                 {
                   itemsOnCanvas = 0;
                   document.getElementById("zoom").innerHTML = "";
-                  document.getElementById("send").firstChild.innerHTML = "<h1> Great! Now just drop it on your friend's screen. </h1>";
+                  document.getElementById("output").innerHTML = "<h1> Great! Now just drop it on your friend's screen. </h1>";
                 }
               }
               scaleFactor = previousScaleFactor * event.scale;
