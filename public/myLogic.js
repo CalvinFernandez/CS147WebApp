@@ -166,7 +166,6 @@ $(function(){
 
         container.bind("transform", function(event) {
             e = event
-            alert(Math.abs(e.touches[0].x - e.touches[1].x));
             if ( Math.abs(e.touches[0].x - e.touches[1].x) < 70 )
             {
               if ( Math.abs( e.touches[0].y - e.touches[1].y) < 70 )
