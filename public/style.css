@@ -1,3 +1,80 @@
+		
+		@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+  		font-family: "Imitation";
+  		src: url("IMIT.TTF");
+  
+	}
+        #zoom {
+
+          }
+		  
+		  #zoom2 {
+            
+			left:300px;
+
+          }
+		  
+		  #zoom3 {
+            
+			left:600px;
+
+          }
+		  
+		  .zoomProps{	  
+			   height: 240px;
+            width: 230px;
+            position:absolute;
+		  }
+	
+          #zoomwrapper {
+            height: 377px;
+            width: 600px;
+            overflow: hidden;
+     
+          }
+		  
+		  .polaroid{
+	
+			text-align: center;
+			  
+			padding: 10px 10px 25px 10px;
+		background: #eee;
+		border: 1px solid #fff;
+		-moz-box-shadow: 0px 2px 15px #333;
+		-webkit-box-shadow:	0px 2px 15px #333;
+		border: 1px solid #dfdfdf;
+    	border: 1px solid rgba(96,96,96,0.2);  
+		font-family:"Imitation";
+		font-size:24px;
+		color:#000;
+		padding-bottom:10px;
+		text-shadow:#333;
+		  }
+		  
+		  .upSky{
+			  background: #FFFFFF;
+			  
+		  }
+		  
+	
+		  
+		  body{
+				background:url(bg.jpg);  
+		  }
+		  
+		  .welcome{
+			  font-family: 'Bree Serif', serif;
+			font-size:24px;
+			color:#FFF;
+			
+        text-shadow: 1px 1px 2px #363636;
+        filter: dropshadow(color=#363636, offx=1, offy=1);
+        
+		  }
+
 		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
 		#home .ui-icon { background:  url(glyphish-icons/53-house.png) 50% 50% no-repeat; background-size: 24px 22px; }
