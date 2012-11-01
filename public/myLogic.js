@@ -264,8 +264,8 @@ $(function(){
         container.bind("transformstart", function(event){
             var e = event;
             var t = transformDirection(event, tch1, tch2);
-            if ( t == 1 )
-              alert(t);
+            //if ( t == 1 )
+             // alert(t);
             tch1 = [e.touches[0].x, e.touches[0].y],
             tch2 = [e.touches[1].x, e.touches[1].y]
             //Check Server for Image here//
@@ -275,6 +275,8 @@ $(function(){
             var e = event;
 
             var t = transformDirection(event, tch1, tch2);
+            if ( t != -1 )
+              alert(t);
             tch1 = [e.touches[0].x, e.touches[0].y],
             tch2 = [e.touches[1].x, e.touches[1].y]
           });
