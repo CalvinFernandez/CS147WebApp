@@ -99,6 +99,24 @@ $(function(){
       }
     }
 
+    //Helper function to determine pinch direction//
+    function transformDirection(event, tch1, tch2)
+    {
+      var pinch = 0;
+      var drop = 1;
+      var e = event;
+      if ( Math.abs(e.touches[0].x - e.touches[1].x) < Math.abs( tch1[0] - tch2[0] ) || 
+            Math.abs(e.touches[0].y - e.touches[1].y ) < Math.abs( tch1[1] - tch2[1] ) )
+      {
+        return pinch;
+      }
+      if ( Math.abs(e.touches[0].x - e.touches[1].x) > Math.abs( tch1[0] - tch2[0] ) || 
+            Math.abs(e.touches[0].y - e.touches[1].y ) > Math.abs( tch1[1] - tch2[1] ) )
+      {
+        return drop;
+      }
+    }
+
     function ZoomView(container, element) {
 
         container = $(container).hammer({
@@ -226,8 +244,13 @@ $(function(){
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    var numGetItems = 0;
+    var transforming = false;
+
     function ZoomListener(container, element) 
     {
+        var tch1 = 0, 
+            tch2 = 0;
 
         container = $(container).hammer({
             prevent_default: true,
@@ -238,16 +261,22 @@ $(function(){
         element = $(element);
 
         container.bind("transformstart", function(event){
-
-            //We save the initial midpoint of the first two touches to say where our transform origin is.
-            alert("transformstart");
+            var e = event;
+            tch1 = [e.touches[0].x, e.touches[0].y],
+            tch2 = [e.touches[1].x, e.touches[1].y]
+            //Check Server for Image here//
         })
 
         container.bind("transform", function(event) {
-            alert("transforming");
+            var e = event;
+
+            alert(transformDirection(event, tch1, tch2));
+
+            tch1 = [e.touches[0].x, e.touches[0].y],
+            tch2 = [e.touches[1].x, e.touches[1].y]
           });
 
         container.bind("transformend", function(event) {
-            alert("transformed");
+           
         });
     }
