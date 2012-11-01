@@ -105,6 +105,7 @@ $(function(){
       var pinch = 0;
       var drop = 1;
       var e = event;
+      alert(tch1[0] - tch2[0]);
       if ( Math.abs(e.touches[0].x - e.touches[1].x) < Math.abs( tch1[0] - tch2[0] ) || 
             Math.abs(e.touches[0].y - e.touches[1].y ) < Math.abs( tch1[1] - tch2[1] ) )
       {
