@@ -172,7 +172,7 @@ $(function(){
             {
               if ( Math.abs( e.touches[0].y - e.touches[1].y) < 90 )
               {
-                $(zoom).InnerHTML = "";
+                $("#zoom").InnerHTML = "";
                 alert("Pinch!");
               }
             }
