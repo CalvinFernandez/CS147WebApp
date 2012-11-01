@@ -176,7 +176,7 @@ $(function(){
                 {
                   itemsOnCanvas = 0;
                   document.getElementById("zoom").innerHTML = "";
-                  documet.getElementById("send").firstChild.innerHTML = "<h1> You just Pinched! </h1>";
+                  alert(documet.getElementById("send").firstChild.innerHTML);
                 }
               }
               scaleFactor = previousScaleFactor * event.scale;
