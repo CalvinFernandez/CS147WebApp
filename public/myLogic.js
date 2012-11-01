@@ -9,7 +9,8 @@ $(function(){
     */
 	
 	var zIndexBackup = 10;
-	
+	var itemsOnCanvas = 1;
+
     function DragView(target) {
       this.target = target[0];
       this.drag = [];
@@ -165,23 +166,29 @@ $(function(){
         })
 
         container.bind("transform", function(event) {
-            
-            //Check for a pinch action//
-            e = event
-            if ( Math.abs(e.touches[0].x - e.touches[1].x) < 90 )
+            if (itemsOnCanvas > 0 )
             {
-              if ( Math.abs( e.touches[0].y - e.touches[1].y) < 90 )
+              //Check for a pinch action//
+              e = event
+              if ( Math.abs(e.touches[0].x - e.touches[1].x) < 90 )
               {
-                
-                document.getElementById("zoom").innerHTML = "";
-                alert("Pinch!");
+                if ( Math.abs( e.touches[0].y - e.touches[1].y) < 90 )
+                {
+                  itemsOnCanvas = 0;
+                  document.getElementById("zoom").innerHTML = "";
+                  documet.getElementById("send").firstChild.innerHTML = "<h1> You just Pinched! </h1>";
+                }
               }
-            }
-            scaleFactor = previousScaleFactor * event.scale;
+              scaleFactor = previousScaleFactor * event.scale;
 			
-            scaleFactor = Math.max(MIN_ZOOM, Math.min(scaleFactor, MAX_ZOOM));
-            transform(event);
-        });
+              scaleFactor = Math.max(MIN_ZOOM, Math.min(scaleFactor, MAX_ZOOM));
+              transform(event);
+            }
+            else if (itemsOnCanvas == 0 )
+            {
+              //Check for shit on server//
+            }
+          });
 
         container.bind("transformend", function(event) {
             previousScaleFactor = scaleFactor;
