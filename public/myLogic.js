@@ -105,16 +105,19 @@ $(function(){
       var pinch = 0;
       var drop = 1;
       var e = event;
+      //Pinch event if either x or y diff is smaller than previous x or y diff//
       if ( Math.abs(e.touches[0].x - e.touches[1].x) < Math.abs( tch1[0] - tch2[0] ) || 
             Math.abs(e.touches[0].y - e.touches[1].y ) < Math.abs( tch1[1] - tch2[1] ) )
       {
         return pinch;
       }
+      //Drop event if either x or y difference is smaller than previous difference//
       if ( Math.abs(e.touches[0].x - e.touches[1].x) > Math.abs( tch1[0] - tch2[0] ) || 
             Math.abs(e.touches[0].y - e.touches[1].y ) > Math.abs( tch1[1] - tch2[1] ) )
       {
         return drop;
       }
+      //No difference//
       return -1;
     }
 
@@ -269,10 +272,32 @@ $(function(){
 
         container.bind("transform", function(event) {
             var e = event;
-
             var t = transformDirection(event, tch1, tch2);
-            if ( t != -1 )
-              alert(t);
+            if ( t == 1 )
+            {
+              //Query Server for unpulled elements//
+              //If unpulled element exists create a new div for it and place it on the screen//
+              //For now we'll just do one item and make it the stock image//
+              if ( numGetItems == 0 )
+              {
+                document.
+                document.getElementById("listener").append(
+                  "<div id='getZoom' class='zoomProps'>
+                    <div class='polaroid'>
+                      <img src='images/screen.jpg' alt='' width='200' height='200' />
+                        <span> My pic </span>
+                    </div>
+                  </div>");
+
+                //Initialize all listeners on this object so it can be moved around//
+                var getZoom = new ZoomView('#getZoom', '#getZoom :first');
+
+                //Set number of items on the screen to one. For now we'll only allow one
+                //but we can change it later//
+                numGetItems = 1;
+              }
+            }
+
             tch1 = [e.touches[0].x, e.touches[0].y],
             tch2 = [e.touches[1].x, e.touches[1].y]
           });
