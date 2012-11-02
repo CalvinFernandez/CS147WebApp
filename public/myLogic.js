@@ -273,7 +273,9 @@ $(function(){
         container.bind("transform", function(event) {
             var e = event;
             var t = transformDirection(event, tch1, tch2);
-            if ( t == 1 )
+            if ( t !=  -1 )
+              alert(t);
+            /*
             {
               //Query Server for unpulled elements//
               //If unpulled element exists create a new div for it and place it on the screen//
@@ -294,7 +296,7 @@ $(function(){
                 //but we can change it later//
               //  numGetItems = 1;
               //}
-            }
+            }*/
 
             tch1 = [e.touches[0].x, e.touches[0].y],
             tch2 = [e.touches[1].x, e.touches[1].y]
