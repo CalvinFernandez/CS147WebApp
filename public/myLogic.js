@@ -273,16 +273,14 @@ $(function(){
         container.bind("transform", function(event) {
             var e = event;
             var t = transformDirection(event, tch1, tch2);
-            if ( t !=  -1 )
-              alert(t);
-            /*
+            if ( t == 1 )
             {
               //Query Server for unpulled elements//
               //If unpulled element exists create a new div for it and place it on the screen//
               //For now we'll just do one item and make it the stock image//
               //if ( numGetItems == 0 )
               //{
-                    
+                alert(t);    
                 document.getElementById("listener")
                 .append("<div id='getZoom' class='zoomProps'><div class='polaroid'><img src='images/screen.jpg' alt='' width='200' height='200' /><span> My pic </span></div></div>");
                 if (document.getElementById("getZoom") != null)
@@ -296,7 +294,7 @@ $(function(){
                 //but we can change it later//
               //  numGetItems = 1;
               //}
-            }*/
+            }
 
             tch1 = [e.touches[0].x, e.touches[0].y],
             tch2 = [e.touches[1].x, e.touches[1].y]
