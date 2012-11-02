@@ -281,13 +281,8 @@ $(function(){
               if ( numGetItems == 0 )
               {
                 document.
-                document.getElementById("listener").append(
-                  "<div id='getZoom' class='zoomProps'>
-                    <div class='polaroid'>
-                      <img src='images/screen.jpg' alt='' width='200' height='200' />
-                        <span> My pic </span>
-                    </div>
-                  </div>");
+                document.getElementById("listener")
+                .append("<div id='getZoom' class='zoomProps'><div class='polaroid'><img src='images/screen.jpg' alt='' width='200' height='200' /><span> My pic </span></div></div>");
 
                 //Initialize all listeners on this object so it can be moved around//
                 var getZoom = new ZoomView('#getZoom', '#getZoom :first');
