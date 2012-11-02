@@ -289,8 +289,8 @@ $(function(){
                 zdiv.setAttribute('class', 'zoomProps');
                 pdiv.setAttribute('class', 'polaroid');
                 itag.src = 'images/screen.jpg';
-                itag.style.width = 200;
-                itag.style.height = 200;
+                itag.style.width = '200px';
+                itag.style.height = '200px';
 
                 document.getElementById("listener").appendChild(zdiv);
                 zdiv.appendChild(pdiv);
