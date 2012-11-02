@@ -280,9 +280,23 @@ $(function(){
               //For now we'll just do one item and make it the stock image//
               //if ( numGetItems == 0 )
               //{
-                alert(t);    
-                document.getElementById("listener")
-                .append("<div id='getZoom' class='zoomProps'><div class='polaroid'><img src='images/screen.jpg' alt='' width='200' height='200' /><span> My pic </span></div></div>");
+                alert(t); 
+
+                //Construct a new instance//   
+                var zdiv = document.createElement('div');
+                var pdiv = document.createElement('div');
+                var itag = document.createElement('img');
+                zdiv.setAttribute('id', 'getZoom');
+                zdiv.setAttribute('class', 'zoomProps');
+                pdiv.setAttribute('class', 'polaroid');
+                itag.src = 'images/screen.jpg';
+                itag.style.width = 200;
+                itag.style.height = 200;
+
+                document.getElementById("listener").appendChild(zdiv);
+                zdiv.appendChild(pdiv);
+                pdiv.appendChild(itag);
+
                 if (document.getElementById("getZoom") != null)
                 {
                   alert("It exists somewhere");
