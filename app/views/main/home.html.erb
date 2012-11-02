@@ -72,10 +72,10 @@
 	
 	<div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+        <input type="file" id="imageSelect" style="display:none" onchange="handleFiles(this.files)">
 		<ul>
                 <li><a href="#one" id="home" data-icon="custom" class="ui-btn-active">Home</a></li>
                 <li><a href="#get" id="key" data-icon="custom">Receive</a></li>
-                <input type="file" id="imageSelect" style="display:none" onchange="handleFiles(this.files)">
                 <li><a href="#send" id="beer" data-icon="custom">Send</a></li>
                 <li><a href="help.php" id="help" data-icon="custom">Help</a></li>
 		</ul>
@@ -111,7 +111,6 @@
             <ul>
                 <li><a href="#one" id="home" data-icon="custom" class="ui-btn-active">Home</a></li>
                 <li><a href="#get" id="key" data-icon="custom">Receive</a></li>
-                <input type="file" id="imageSelect" style="display:none" onchange="handleFiles(this.files)">
                 <li><a href="#send" id="beer" data-icon="custom">Send</a></li>
                 <li><a href="help.php" id="help" data-icon="custom">Help</a></li>
             </ul>
