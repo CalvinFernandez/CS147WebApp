@@ -278,9 +278,8 @@ $(function(){
               //Query Server for unpulled elements//
               //If unpulled element exists create a new div for it and place it on the screen//
               //For now we'll just do one item and make it the stock image//
-              //if ( numGetItems == 0 )
-              //{
-                alert(t); 
+              if ( numGetItems == 0 )
+              {
 
                 //Construct a new instance//   
                 var zdiv = document.createElement('div');
@@ -296,18 +295,13 @@ $(function(){
                 document.getElementById("listener").appendChild(zdiv);
                 zdiv.appendChild(pdiv);
                 pdiv.appendChild(itag);
-
-                if (document.getElementById("getZoom") != null)
-                {
-                  alert("It exists somewhere");
-                }
                 //Initialize all listeners on this object so it can be moved around//
                 var getZoom = new ZoomView('#getZoom', '#getZoom :first');
 
                 //Set number of items on the screen to one. For now we'll only allow one
                 //but we can change it later//
-              //  numGetItems = 1;
-              //}
+                numGetItems = 1;
+              }
             }
 
             tch1 = [e.touches[0].x, e.touches[0].y],
