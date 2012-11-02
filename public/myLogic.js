@@ -278,9 +278,9 @@ $(function(){
               //Query Server for unpulled elements//
               //If unpulled element exists create a new div for it and place it on the screen//
               //For now we'll just do one item and make it the stock image//
-              if ( numGetItems == 0 )
-              {
-                document.
+              //if ( numGetItems == 0 )
+              //{
+                    
                 document.getElementById("listener")
                 .append("<div id='getZoom' class='zoomProps'><div class='polaroid'><img src='images/screen.jpg' alt='' width='200' height='200' /><span> My pic </span></div></div>");
                 if (document.getElementById("getZoom") != null)
@@ -292,8 +292,8 @@ $(function(){
 
                 //Set number of items on the screen to one. For now we'll only allow one
                 //but we can change it later//
-                numGetItems = 1;
-              }
+              //  numGetItems = 1;
+              //}
             }
 
             tch1 = [e.touches[0].x, e.touches[0].y],
